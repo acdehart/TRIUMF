@@ -1,5 +1,9 @@
-"""MAIN.PY"""
-"""This is the main file requiring only the path to a structured dat file in teh same directory as our data
+""" main.py """
+"""
+Author: A.C. DeHart
+Environnment: Python 2.7
+Dependence: requires fn.py as well as the raw data files and scans.dat which contains necessary header information for parsing.
+Comment: This is the main file requiring only the path to a structured dat file in teh same directory as our data
 RUN fitstark.py and stability.py AFTER!!!
 This should be used to process future data sets under a different naming regieme
 """ 
