@@ -1,0 +1,45 @@
+Author: A.C. DeHart
+Comment: This is not a script. It is a text file with helpful linux commands to navigate and move temperature data files from our R-Pi unit.
+
+Log in:
+ssh franciumpi@armdaq05.triumf.ca
+pwd: Fr206
+
+Check proceses:
+ps aux | grep temp
+
+Run program:
+cd rasbi_temp
+./temp_monitor.exe
+
+Run monitor:
+./report.sh
+
+Make bash script executable:
+chmod +x /path/to/yourscript.sh
+
+See latest data:
+tail `ls -t | head -1`
+OR
+tail -f temp_2017_6_21.txt
+
+Copy file over:
+-Requires sshpass-
+sshpass -p "Fr206" scp -r franciumpi@armdaq05.triumf.ca:~/temperature_data/temp_2017_4_12.txt /home/dehart/Desktop/
+scp -r franciumpi@armdaq05.triumf.ca:~/temperature_data/temp_2017_11_15.txt /home/dehart/Desktop/test
+
+File to RaspberryPi:
+scp $FILE franciumpi@armdaq05.triumf.ca:~/
+
+Command for latest file:
+cat $(cd ~/temperature_data/ ; readlink -f $(ls -t | head -1))
+
+Print last line of file:
+grep "." temp_2017_6_21.txt | tail -1
+OR (in red)
+tac temp_2017_6_21.txt | grep -m 1 .
+
+Take last file and print last line:
+fn=$(ls -t | head -n1)
+grep "." "$fn" | tail -1
+
