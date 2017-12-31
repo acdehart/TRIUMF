@@ -1,5 +1,9 @@
 """
-This file should contain a list of functions useful for organizing and plotting data.
+Author: A.C. DeHart
+Script: fn.py
+Environnment: Python 2.7
+Comment: This is a python script which contains several functions used for organizing and plotting our data.
+main.py depends on this script.
 """
 import fn
 import glob
