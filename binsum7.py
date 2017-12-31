@@ -1,8 +1,9 @@
+""" binsum7.py"""
 """"
 Author: A.C. DeHart & Mukut
 Date: 25/05/2016
-File: binsum2.py
-Version: Python 3.5.1
+Environment: Python 3.5.1
+Comment: There were some version issues developing and running this script in different environments, but it worked out in the end. On the local machines in the lab, this script will find the newest directory with data in it and actively displays the cumulative sum of the latest scan as well as binning the scan per initial user input. 
 """
 print(":::Running Binsum7:::\n")
 import os, time, sys, re
